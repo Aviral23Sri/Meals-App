@@ -1,4 +1,3 @@
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:meals/data/dummy_data.dart';
 import 'package:meals/models/category.dart';
@@ -34,7 +33,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 3 / 2,

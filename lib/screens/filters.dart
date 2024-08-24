@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:meals/screens/tabs.dart';
-import 'package:meals/widgets/main_drawer.dart';
 
 enum Filter {
   glutenFree,
@@ -80,7 +78,7 @@ class _FitersScreenState extends State<FiltersScreen> {
                     color: Theme.of(context).colorScheme.onBackground),
               ),
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(left: 34, right: 22),
+              contentPadding: const EdgeInsets.only(left: 34, right: 22),
             ),
             SwitchListTile(
               value: _lactoseFreeFilterSet,
@@ -101,7 +99,7 @@ class _FitersScreenState extends State<FiltersScreen> {
                     color: Theme.of(context).colorScheme.onBackground),
               ),
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(left: 34, right: 22),
+              contentPadding: const EdgeInsets.only(left: 34, right: 22),
             ),
             SwitchListTile(
               value: _vegetarianFilterSet,
@@ -122,7 +120,7 @@ class _FitersScreenState extends State<FiltersScreen> {
                     color: Theme.of(context).colorScheme.onBackground),
               ),
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(left: 34, right: 22),
+              contentPadding: const EdgeInsets.only(left: 34, right: 22),
             ),
             SwitchListTile(
               value: _veganFilterSet,
@@ -143,7 +141,7 @@ class _FitersScreenState extends State<FiltersScreen> {
                     color: Theme.of(context).colorScheme.onBackground),
               ),
               activeColor: Theme.of(context).colorScheme.tertiary,
-              contentPadding: EdgeInsets.only(left: 34, right: 22),
+              contentPadding: const EdgeInsets.only(left: 34, right: 22),
             ),
           ],
         ),
