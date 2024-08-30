@@ -33,7 +33,7 @@ class MealDetailsScreen extends ConsumerWidget {
                 ),
               );
             },
-            icon: Icon(isFavorite ? Icons.star : Icons.star_border),
+            icon: isFavorite? const Icon(Icons.favorite,color: Colors.red,) : const Icon(Icons.favorite),
           )
         ]),
         body: SingleChildScrollView(
