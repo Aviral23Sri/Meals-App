@@ -33,17 +33,32 @@ class MealDetailsScreen extends ConsumerWidget {
                 ),
               );
             },
-            icon: isFavorite? const Icon(Icons.favorite,color: Colors.red,) : const Icon(Icons.favorite),
+            icon: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              transitionBuilder: (child,animation){
+                return FadeTransition(opacity: animation,child:child ,);
+              },
+              child: isFavorite
+                  ? const Icon(
+                      key: ValueKey(10),
+                      Icons.favorite,
+                      color: Colors.red,
+                    )
+                  : const Icon(key: ValueKey(11),Icons.favorite),
+            ),
           )
         ]),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Image.network(
-                meal.imageUrl,
-                height: 300,
-                width: double.infinity,
-                fit: BoxFit.cover,
+              Hero(
+                tag: meal.id,
+                child: Image.network(
+                  meal.imageUrl,
+                  height: 300,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
               ),
               const SizedBox(height: 14),
               Text(
